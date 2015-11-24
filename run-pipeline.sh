@@ -17,3 +17,11 @@ echo "Step 3. Assembles the transcript by using the cufflinks"
 cufflinks -o output/cufflinks_out_gut output/tophat_out_gut/accepted_hits.bam
 cufflinks -o output/cufflinks_out_liver output/tophat_out_liver/accepted_hits.bam
 
+echo "Step 4"
+echo "output/cufflinks_out_gut/transcripts.gtf" > assemblies.txt
+echo "output/cufflinks_out_liver/transcripts.gtf" >> assemblies.txt
+cuffmerge assemblies.txt
+
+echo "Step 5"
+
+
