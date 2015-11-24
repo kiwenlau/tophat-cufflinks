@@ -18,10 +18,11 @@ cufflinks -o output/cufflinks_out_gut output/tophat_out_gut/accepted_hits.bam
 cufflinks -o output/cufflinks_out_liver output/tophat_out_liver/accepted_hits.bam
 
 echo "Step 4"
-echo "output/cufflinks_out_gut/transcripts.gtf" > assemblies.txt
-echo "output/cufflinks_out_liver/transcripts.gtf" >> assemblies.txt
-cuffmerge assemblies.txt
+echo "output/cufflinks_out_gut/transcripts.gtf" > output/assemblies.txt
+echo "output/cufflinks_out_liver/transcripts.gtf" >> output/assemblies.txt
+cuffmerge -o output/merged_asm output/assemblies.txt
 
 echo "Step 5"
+cuffdiff -o output/cuffdiff_out output/merged_asm/merged.gtf output/tophat_out_gut/accepted_hits.bam output/tophat_out_liver/accepted_hits.bam
 
 
