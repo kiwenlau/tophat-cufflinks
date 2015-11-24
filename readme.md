@@ -3,10 +3,10 @@
 - Base image: Python:2.7
 - OS: Debian 8
 
-- tophat	2.0.9
-- bowtie2	2.1.0
-- samtools	0.1.18
-- cufflinks	2.2.1
+- tophat2: 2.0.9
+- bowtie2: 2.1.0
+- samtools: 0.1.18
+- cufflinks: 2.2.1
 
 构建镜像
 
