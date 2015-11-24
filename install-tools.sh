@@ -22,6 +22,6 @@ tar -zxf cufflinks-2.2.1.Linux_x86_64.tar.gz
 cp -r samtools-1.2 /usr/local/bin/samtools
 cp -r bowtie2-2.2.6 /usr/local/bin/bowtie2
 cp -r tophat-2.1.0.Linux_x86_64 /usr/local/bin/tophat2 
-cp -r cufflinks-2.2.1.Linux_x86_64 /usr/local/bin/cufflinks 
+cp -r cufflinks-2.2.1.Linux_x86_64 /usr/local/bin/cufflinks
 
 rm -rf /root/*

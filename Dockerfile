@@ -1,5 +1,5 @@
-# why choose python?
-FROM ubuntu:14.04
+# tophat2 dependent on python 2.7
+FROM python:2.7
 MAINTAINER kiwenlau@gmail.com
 
 WORKDIR /root
