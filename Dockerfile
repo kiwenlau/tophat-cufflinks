@@ -1,5 +1,5 @@
 # why choose python?
-FROM python:2.7
+FROM ubuntu:14.04
 MAINTAINER kiwenlau@gmail.com
 
 WORKDIR /root
@@ -10,8 +10,11 @@ RUN sh /tmp/install-tools.sh
 
 # add official test dataset of tophat
 # https://ccb.jhu.edu/software/tophat/downloads/test_data.tar.gz 
-ADD test_data.tar.gz /root
+ADD test_data.tar.gz /root/test
  
 # add official test dataset of cufflinks
 # https://github.com/cole-trapnell-lab/cufflinks/tree/master/doc/html/downloads/test_data.sam
-ADD test_data.sam /root/test_data.sam
+ADD test_data.sam /root/test/test_data.sam
+
+# set envrionment variable PATH
+ENV PATH=$PATH:/usr/local/bin/samtools/bin:/usr/local/bin/bowtie2:/usr/local/bin/tophat2:/usr/local/bin/cufflinks
