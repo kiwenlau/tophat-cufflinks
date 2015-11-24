@@ -16,5 +16,9 @@ ADD test_data.tar.gz /root/test
 # https://github.com/cole-trapnell-lab/cufflinks/tree/master/doc/html/downloads/test_data.sam
 ADD test_data.sam /root/test/test_data.sam
 
+# add RNA-Seq test dataset from Nextflow
+# https://github.com/nextflow-io/rnatoy
+ADD data.tar.gz /root
+
 # set envrionment variable PATH
 ENV PATH=$PATH:/usr/local/bin/samtools/bin:/usr/local/bin/bowtie2:/usr/local/bin/tophat2:/usr/local/bin/cufflinks
